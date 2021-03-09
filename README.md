@@ -18,4 +18,56 @@
 
 # Step3: Add build stage ( Either add AWS buld or Jenkins):
 
+https://docs.aws.amazon.com/codebuild/latest/userguide/sample-codedeploy.html
+
+![image](https://user-images.githubusercontent.com/54719289/110523470-22fba180-8138-11eb-9f0c-9a86e78a8e7d.png)
+![image](https://user-images.githubusercontent.com/54719289/110523538-3eff4300-8138-11eb-9839-8119bb21d748.png)
+![image](https://user-images.githubusercontent.com/54719289/110523598-56d6c700-8138-11eb-848a-73fec53c69e6.png)
+![image](https://user-images.githubusercontent.com/54719289/110526854-4fb1b800-813c-11eb-8e0c-df1d363a86d6.png)
+
+
+# Step3 : Code Deploy:
+
+      1. Create EC2 INstance with Add-key Keyname : Name and Value : Codedeploy
+  ![image](https://user-images.githubusercontent.com/54719289/110528525-3f024180-813e-11eb-9024-3be00fe47a06.png)   
+      2. Create new role for EC2 with S#fullaccess --> rolename: s3fullaccess
+   ![image](https://user-images.githubusercontent.com/54719289/110528421-26922700-813e-11eb-9c1e-bc11662a17ca.png)
+   
+      3. ATtach the role into EC2 instance
+   ![image](https://user-images.githubusercontent.com/54719289/110528831-92748f80-813e-11eb-9ed5-8656ef5539f3.png)
+   ![image](https://user-images.githubusercontent.com/54719289/110528937-ac15d700-813e-11eb-8bce-e7bd44a896a6.png)
+
+
+      4. Create  Code Deploy - Application:
+![image](https://user-images.githubusercontent.com/54719289/110536778-dcae3e80-8147-11eb-9ce3-7519912eb71a.png)
+![image](https://user-images.githubusercontent.com/54719289/110536964-13845480-8148-11eb-85f4-fc683cb329e8.png)
+
+      Create deployment group
+![image](https://user-images.githubusercontent.com/54719289/110537172-55ad9600-8148-11eb-9821-9dcd69d919cc.png)
+![image](https://user-images.githubusercontent.com/54719289/110538000-7a563d80-8149-11eb-95ad-ca1ac4a46fc5.png)
+
+![image](https://user-images.githubusercontent.com/54719289/110538354-f8b2df80-8149-11eb-87dd-b44243962872.png)
+![image](https://user-images.githubusercontent.com/54719289/110538481-1a13cb80-814a-11eb-81de-f6eb236da3b3.png)
+
+
+![image](https://user-images.githubusercontent.com/54719289/110539175-ea18f800-814a-11eb-9aa7-72d2a5cfc53f.png)
+
+            Update Agent on EC2 instnace:
+            
+![image](https://user-images.githubusercontent.com/54719289/110539343-2187a480-814b-11eb-8180-3c8555761b15.png)
+
+         Install code deploy agent script in EC2 instance:(REfer the link:https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-windows.html)
+         
+         
+![image](https://user-images.githubusercontent.com/54719289/110538141-a5d92800-8149-11eb-9d53-6ab99aed8e65.png)
+
+
+             7  wget https://aws-codedeploy-eu-west-2.s3.amazonaws.com/latest/install
+             8  ll
+            9  cd install
+            10  chmod +x install
+            15  sudo ./install auto
+       
+  
+
 
