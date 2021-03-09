@@ -16,6 +16,6 @@
   
   ![image](https://user-images.githubusercontent.com/54719289/110518801-97cbdd00-8132-11eb-8690-a44f80154e29.png)
 
-# Step3: Add build stage ( EIther add AWS buld or Jenkins):
+# Step3: Add build stage ( Either add AWS buld or Jenkins):
 
 
