@@ -42,7 +42,7 @@ https://docs.aws.amazon.com/codebuild/latest/userguide/sample-codedeploy.html
 ![image](https://user-images.githubusercontent.com/54719289/110536778-dcae3e80-8147-11eb-9ce3-7519912eb71a.png)
 ![image](https://user-images.githubusercontent.com/54719289/110536964-13845480-8148-11eb-85f4-fc683cb329e8.png)
 
-      Create deployment group
+            # Create deployment group
 ![image](https://user-images.githubusercontent.com/54719289/110537172-55ad9600-8148-11eb-9821-9dcd69d919cc.png)
 ![image](https://user-images.githubusercontent.com/54719289/110538000-7a563d80-8149-11eb-95ad-ca1ac4a46fc5.png)
 
@@ -52,7 +52,7 @@ https://docs.aws.amazon.com/codebuild/latest/userguide/sample-codedeploy.html
 
 ![image](https://user-images.githubusercontent.com/54719289/110539175-ea18f800-814a-11eb-9aa7-72d2a5cfc53f.png)
 
-            Update Agent on EC2 instnace:
+            # Update Agent on EC2 instnace:
             
 ![image](https://user-images.githubusercontent.com/54719289/110539343-2187a480-814b-11eb-8180-3c8555761b15.png)
 
@@ -67,6 +67,29 @@ https://docs.aws.amazon.com/codebuild/latest/userguide/sample-codedeploy.html
             9  cd install
             10  chmod +x install
             15  sudo ./install auto
+            
+            
+            # Restart the service codedeploy-agent:
+            
+               service codedeploy-agent restart
+               
+  ![image](https://user-images.githubusercontent.com/54719289/110542577-37976400-814f-11eb-8a45-e69e3e4c7ca8.png)
+  
+         # Now Agent is running in our instance
+  
+  ![image](https://user-images.githubusercontent.com/54719289/110543016-c99f6c80-814f-11eb-85b9-874df826dfd2.png)
+
+
+         # If any issue, check the log
+         
+               /var/log/aws/codedeploy-agent/codedeploy-agent.log
+               
+          # Disable load balancer and crete deployment group:
+          
+   ![image](https://user-images.githubusercontent.com/54719289/110543617-8db8d700-8150-11eb-85d4-760cb477b7b2.png)
+
+   ![image](https://user-images.githubusercontent.com/54719289/110543880-e4261580-8150-11eb-8ead-cac9ee4529db.png)
+
        
   
 
