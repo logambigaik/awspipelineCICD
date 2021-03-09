@@ -20,6 +20,27 @@
 
 https://docs.aws.amazon.com/codebuild/latest/userguide/sample-codedeploy.html
 
+      version: 0.2
+
+      phases:
+         install:
+            runtime-versions:
+            java: corretto8
+         build:
+         commands:
+            - echo Build started on `date`
+            - mvn test 
+         post_build:
+         commands:
+            - echo Build completed on `date`
+            - mvn package
+         artifacts:
+         files:
+         - target/my-app-1.0-SNAPSHOT.jar
+         - appspec.yml
+         discard-paths: yes
+
+
 ![image](https://user-images.githubusercontent.com/54719289/110523470-22fba180-8138-11eb-9f0c-9a86e78a8e7d.png)
 ![image](https://user-images.githubusercontent.com/54719289/110523538-3eff4300-8138-11eb-9839-8119bb21d748.png)
 ![image](https://user-images.githubusercontent.com/54719289/110523598-56d6c700-8138-11eb-848a-73fec53c69e6.png)
