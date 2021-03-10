@@ -83,11 +83,11 @@ https://docs.aws.amazon.com/codebuild/latest/userguide/sample-codedeploy.html
 ![image](https://user-images.githubusercontent.com/54719289/110538141-a5d92800-8149-11eb-9d53-6ab99aed8e65.png)
 
 
-             7  wget https://aws-codedeploy-eu-west-2.s3.amazonaws.com/latest/install
-             8  ll
-            9  cd install
-            10  chmod +x install
-            15  sudo ./install auto
+             1  yum install -y ruby
+             2  wget https://aws-codedeploy-eu-west-2.s3.amazonaws.com/latest/install
+             3  cd install
+             4  chmod +x install
+             5  sudo ./install auto
             
             
             # Restart the service codedeploy-agent:
